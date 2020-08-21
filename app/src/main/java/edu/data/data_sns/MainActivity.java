@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginBtn = findViewById(R.id.login_btn);
         loginBtn.setOnClickListener(
-            new Button.OnClickListener() {
-                public void onClick(View view) {
-                    Log.d("Data_SNS", "Login Button Clicked!!!");
+                new Button.OnClickListener() {
+                    public void onClick(View view) {
+                        Log.d("DATA_SNS", "Login Button Clicked!!!");
 
-                    Intent intent = new Intent(MainActivity.this, FeedActivity.class);
-                    startActivity(intent);
+                        Intent intent = new Intent(MainActivity.this, edu.data.data_sns.FeedActivity.class);
+                        startActivity(intent);
+                    }
                 }
-            }
         );
 
         Button signUpBtn = findViewById(R.id.signUp_btn);

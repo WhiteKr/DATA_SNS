@@ -3,4 +3,18 @@
     <string name="login">로그인</string>
     <string name="data_sns">DATA_SNS</string>
     <string name="sign_up">회원가입</string>
+    <string name="id">ID</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Password Confirm</string>
+    <string name="name">Name</string>
+    <string name="birth">Birth</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password_n_confirm">Password\nConfirm</string>
+    <string name="gender">Gender</string>
+    <string name="phone_n_number">Phone\nNumber</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
 </resources>
