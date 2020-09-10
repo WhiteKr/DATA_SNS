@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -16,7 +15,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 //
-        final CheckBox maleCheckbox = (CheckBox) findViewById(R.id.signUp_checkMale_checkBox) ;
+        final CheckBox maleCheckbox = (CheckBox) findViewById(R.id.signUp_checkMale_checkBox);
         final CheckBox femaleCheckbox = (CheckBox) findViewById(R.id.signUp_checkFemale_checkBox);
 
         maleCheckbox.setOnClickListener(new CheckBox.OnClickListener() {
