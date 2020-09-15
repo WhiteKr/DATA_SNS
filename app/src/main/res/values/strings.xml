@@ -17,4 +17,10 @@
     <string name="e_mail">E-Mail</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
+    <string name="cancel">취소</string>
+    <string name="post">올리기</string>
+    <string name="loadImage">이미지 불러오기</string>
+    <string name="typeTitle">제목을 입력하세요</string>
+    <string name="typeContent">내용을 입력하세요</string>
+    <string name="uploadedImage">uploadedImage</string>
 </resources>
