@@ -1,5 +1,7 @@
 package edu.data.data_sns;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,8 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
@@ -26,9 +26,11 @@ public class UploadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
 
-        EditText title = findViewById(R.id.title);
-        EditText content = findViewById(R.id.content);
+        final EditText title = findViewById(R.id.title);
+        final EditText content = findViewById(R.id.content);
+
         thumbnail = findViewById(R.id.uploaded_image);
+
         Button imgUploadBtn = findViewById(R.id.image_upload_btn);
         imgUploadBtn.setOnClickListener(
                 new Button.OnClickListener() {
@@ -39,13 +41,32 @@ public class UploadActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        Button uploadBtn = findViewById(R.id.upload_btn);
+        uploadBtn.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        CallAPI postReq = new CallAPI(new CallAPI.AsyncResponse() {
+                            @Override
+                            public void processFinish(String res) {
+                                Log.d("DATA_SNS POST_RESPONSE", res);
+                            }
+                        });
+
+                        postReq.execute(getString(R.string.uploadDomain),
+                                "title=" + title.getText().toString()
+                                        +"&content=" + content.getText().toString()
+                        );
+                    }
+                }
+        );
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK) {
-            switch (requestCode) {
+        if(resultCode == Activity.RESULT_OK){
+            switch (requestCode){
                 case GALLERY_REQUEST:
                     Uri selectedImage = data.getData();
                     try {

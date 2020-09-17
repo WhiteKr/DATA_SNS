@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                         String user_pw = ((EditText) findViewById(R.id.user_pw)).getText().toString();
                         try {
                             httpRequest = new HttpRequest();
-                            httpRequest.execute(new URL(getString(R.string.domain) + user_id + "&user_pw=" + user_pw + ""));
+                            httpRequest.execute(new URL(getString(R.string.loginDomain) + user_id + "&user_pw=" + user_pw + ""));
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         signupBtn.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        Intent first_intent = new Intent(MainActivity.this, SignUpActivity.class);
+                        Intent first_intent = new Intent(MainActivity.this, SignupActivity.class);
                         startActivity(first_intent);
                     }
                 }

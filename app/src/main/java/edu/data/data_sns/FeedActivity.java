@@ -21,7 +21,7 @@ public class FeedActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         Log.d("DATA_SNS", "Sign Up Button Clicked!!! (in FeedActivity)");
 
-                        Intent intent = new Intent(FeedActivity.this, SignUpActivity.class);
+                        Intent intent = new Intent(FeedActivity.this, SignupActivity.class);
                         startActivity(intent);
                     }
                 }

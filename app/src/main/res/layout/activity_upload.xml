@@ -56,14 +56,14 @@
         android:id="@+id/uploaded_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/uploadedImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
         app:layout_constraintVertical_bias="0.111"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/uploadedImage" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/post_btn"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_upload_btn"
+        app:layout_constraintTop_toBottomOf="@+id/upload_btn"
         app:layout_constraintVertical_bias="0.468" />
 
     <Button
